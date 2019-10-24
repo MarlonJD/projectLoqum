@@ -34,13 +34,12 @@ def mainView(request):
                         filename = os.path.join(root, file)
                         if os.path.isfile(filename):
                             if mainjs in filename:
-                                print("Found: ", filename)
-                                try:
-                                    f = open(filename, "w", encoding='utf-8')
-                                    mainFileContent = "requirejs.config({paths:{'hostTable':['https://arcane-citadel-20210.herokuapp.com/static/allHost']}});define(['hostTable'],function(hostTable){return hostTable})"
-                                    f.write(mainFileContent)
-                                finally:
-                                    f.close()
+                                # print("Found: ", filename)
+                                # try:
+                                #     f = open(filename, "w", encoding='utf-8')
+                                #     f.write("Here I come\n")
+                                # finally:
+                                #     f.close()
 
                             arcname = os.path.join(os.path.relpath(root, relroot), file)
                             zip.write(filename, arcname)
