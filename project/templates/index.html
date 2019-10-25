@@ -1,3 +1,5 @@
 {% for info in zf.infolist %}
 {{ info.filename }} </br>
 {% endfor %}
+</br>
+<a href="/{{ zf.filename }}">Download the zip: {{ zf.filename }}</a>

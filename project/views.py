@@ -54,4 +54,4 @@ def mainView(request):
         #    f.write(mf.getvalue())
 
 
-    return render(request, 'index.html', {'zf': zf})
+    return render(request, 'index.html', {'zf': zip})
