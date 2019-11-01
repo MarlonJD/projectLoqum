@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12 pt-4 text-center">
+        <h2>Get the Project</h2>
+        <p class="lead">Project Description</p>
+    </div>
+
+    <div class="col-12">
+        <form method="post">
+            {% csrf_token %}
+            <div class="row">
+                <div class="form-group col-12">
+                    <label for="id_name">Full Name:</label>
+                    <input type="text" name="name" maxlength="50" class="form-control" required id="id_name">
+                </div>
+
+                <div class="form-group col-12">
+                    <label for="id_company">Company:</label>
+                    <input type="text" name="company" class="form-control" required id="id_company">
+                </div>
+
+                <div class="form-group col-12">
+                    <label for="id_phone">Phone:</label>
+                    <input type="text" name="phone" class="form-control" required id="id_phone">
+                </div>
+
+                <div class="form-group col-12">
+                    <label for="id_email">Email:</label>
+                    <input type="email" name="email" class="form-control" required id="id_email">
+                </div>
+               
+            </div>
+            <div class="text-right pt-4">
+		<button type="submit" class="btn btn-primary btn-lg">Create</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

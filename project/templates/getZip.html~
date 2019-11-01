@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12 pt-4">
+	<div class="card">
+	    <div class="card-body">
+		<h5 class="card-title">Key Detail</h5>
+		<h6 class="card-subtitle mb-2 text-muted">Project Name</h6>
+		<p class="card-text">
+		    <ul class="list-group list-group-flush">
+			<li class="list-group-item"><strong>Full Name </strong>: {{ key.fullname }}</li>
+			<li class="list-group-item"><strong>Company </strong>: {{ key.company }}</li>
+			<li class="list-group-item"><strong>Phone </strong>: {{ key.phone }}</li>
+		    </ul>
+		</p>
+		<p>Your download link has been sent to your mailbox. Please check your spam.</p>
+	    </div>
+	</div>
+    </div>
+</div>
+{% endblock %}

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Project ,RemoteFile
+from .models import Project ,RemoteFile, Key
 from django import forms
 
 
@@ -13,8 +13,8 @@ class MyModelForm(forms.ModelForm):
 
 class MyModelAdmin(admin.ModelAdmin):
     fields = ('name', 'fileType', 'version', 'content')
-    list_display = ('fileType', )
     form = MyModelForm
 
 admin.site.register(RemoteFile, MyModelAdmin)
 admin.site.register(Project)
+admin.site.register(Key)
